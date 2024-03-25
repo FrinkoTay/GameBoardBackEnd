@@ -697,9 +697,18 @@ module.exports = [
         },
         assets: {
             north: {},
-            east: {},
-            south: {},
-            west: {}
+            east: {
+                asset: "road",
+                connects: []
+            },
+            south: {
+                asset: "road",
+                connects: []
+            },
+            west: {
+                asset: "road",
+                connects: []
+            }
         }
     },
     {
@@ -719,10 +728,22 @@ module.exports = [
             location: null
         },
         assets: {
-            north: {},
-            east: {},
-            south: {},
-            west: {}
+            north: {
+                asset: "road",
+                connects: []
+            },
+            east: {
+                asset: "road",
+                connects: []
+            },
+            south: {
+                asset: "road",
+                connects: []
+            },
+            west: {
+                asset: "road",
+                connects: []
+            }
         }
     }
 ]
