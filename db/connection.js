@@ -1,12 +1,8 @@
-const { Pool } = require('pg');
-const ENV = process.env.NODE_ENV || 'development';
+const { MongoClient } = require("mongodb")
+const { username, password } = require("../hidden/dbURI")
 
-require('dotenv').config({
-  path: `${__dirname}/../.env.${ENV}`,
-});
+const dbURI = `mongodb+srv://${username}:${password}@tiledb.quwskmg.mongodb.net/?retryWrites=true&w=majority&appName=TileDB`
 
-if (!process.env.PGDATABASE) {
-  throw new Error('PGDATABASE not set');
-}
+const client = new MongoClient(dbURI)
 
-module.exports = new Pool();
+module.exports = client
