@@ -1,7 +1,11 @@
 const { MongoClient } = require("mongodb")
-const { username, password } = require("../hidden/dbURI")
+const ENV = process.env.NODE_ENV || 'development'
 
-const dbURI = `mongodb+srv://${username}:${password}@tiledb.quwskmg.mongodb.net/?retryWrites=true&w=majority&appName=TileDB`
+require('dotenv').config({
+    path: `${__dirname}/../.env-files/.env.${ENV}`
+})
+
+const dbURI = process.env.DATABASE_URL
 
 const client = new MongoClient(dbURI)
 
