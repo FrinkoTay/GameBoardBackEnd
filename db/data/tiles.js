@@ -1,6 +1,6 @@
 module.exports = [
     {
-        grid_id: { x: 0, y: 0, z: 0},
+        grid_id: { row: null, column: null },
         orientation: 0,
         corresponding_tiles: {
             north: null,
@@ -13,20 +13,21 @@ module.exports = [
         citizen: {
             is_citizen: false,
             asset: null,
-            location: null
+            location: null,
+            player: null
         },
         assets: {
-            north: {},
-            east: {},
-            south: {
+            0: {},
+            1: {},
+            2: {
                 asset: "road",
                 connects: []
             },
-            west: {}
+            3: {}
         }
     },
     {
-        grid_id: { x: 0, y: 0, z: 0},
+        grid_id: { row: null, column: null },
         orientation: 0,
         corresponding_tiles: {
             north: null,
@@ -39,17 +40,18 @@ module.exports = [
         citizen: {
             is_citizen: false,
             asset: null,
-            location: null
+            location: null,
+            player: null
         },
         assets: {
-            north: {},
-            east: {},
-            south: {},
-            west: {}
+            0: {},
+            1: {},
+            2: {},
+            3: {}
         }
     },
     {
-        grid_id: { x: 0, y: 0, z: 0},
+        grid_id: { row: null, column: null },
         orientation: 0,
         corresponding_tiles: {
             north: null,
@@ -62,29 +64,30 @@ module.exports = [
         citizen: {
             is_citizen: false,
             asset: null,
-            location: null
+            location: null,
+            player: null
         },
         assets: {
-            north: {
+            0: {
                 asset: 'city',
-                connects: ['east', 'south', 'west']
+                connects: [1, 2, 3]
             },
-            east: {
+            1: {
                 asset: 'city',
-                connects: ['north', 'south', 'west']
+                connects: [0, 2, 3]
             },
-            south: {
+            2: {
                 asset: 'city',
-                connects: ['north', 'east', 'west']
+                connects: [0, 1, 3]
             },
-            west: {
+            3: {
                 asset: 'city',
-                connects: ['north', 'east', 'south']
+                connects: [0, 1, 2]
             }
         }
     },
     {
-        grid_id: { x: 0, y: 0, z: 0},
+        grid_id: { row: null, column: null },
         orientation: 0,
         corresponding_tiles: {
             north: null,
@@ -97,26 +100,27 @@ module.exports = [
         citizen: {
             is_citizen: false,
             asset: null,
-            location: null
+            location: null,
+            player: null
         },
         assets: {
-            north: {
+            0: {
                 asset: 'road',
-                connects: ['south']
+                connects: [2]
             },
-            east: {
+            1: {
                 asset: 'city',
                 connects: []
             },
-            south: {
+            2: {
                 asset: 'road',
-                connects: ['north']
+                connects: [0]
             },
-            west: {}
+            3: {}
         }
     },
     {
-        grid_id: { x: 0, y: 0, z: 0},
+        grid_id: { row: null, column: null },
         orientation: 0,
         corresponding_tiles: {
             north: null,
@@ -129,20 +133,21 @@ module.exports = [
         citizen: {
             is_citizen: false,
             asset: null,
-            location: null
+            location: null,
+            player: null
         },
         assets: {
-            north: {
+            0: {
                 asset: 'city',
                 connects: []
             },
-            east: {},
-            south: {},
-            west: {}
+            1: {},
+            2: {},
+            3: {}
         }
     },
     {
-        grid_id: { x: 0, y: 0, z: 0},
+        grid_id: { row: null, column: null },
         orientation: 0,
         corresponding_tiles: {
             north: null,
@@ -155,23 +160,24 @@ module.exports = [
         citizen: {
             is_citizen: false,
             asset: null,
-            location: null
+            location: null,
+            player: null
         },
         assets: {
-            north: {},
-            east: {
+            0: {},
+            1: {
                 asset: 'city',
-                connects: ['west']
+                connects: [3]
             },
-            south: {},
-            west: {
+            2: {},
+            3: {
                 asset: 'city',
-                connects: ['east']
+                connects: [1]
             }
         }
     },
     {
-        grid_id: { x: 0, y: 0, z: 0},
+        grid_id: { row: null, column: null },
         orientation: 0,
         corresponding_tiles: {
             north: null,
@@ -184,23 +190,24 @@ module.exports = [
         citizen: {
             is_citizen: false,
             asset: null,
-            location: null
+            location: null,
+            player: null
         },
         assets: {
-            north: {
+            0: {
                 asset: 'city',
-                connects: ['south']
+                connects: [2]
             },
-            east: {},
-            south: {
+            1: {},
+            2: {
                 asset: 'city',
-                connects: ['north']
+                connects: [0]
             },
-            west: {}
+            3: {}
         }
     },
     {
-        grid_id: { x: 0, y: 0, z: 0},
+        grid_id: { row: null, column: null },
         orientation: 0,
         corresponding_tiles: {
             north: null,
@@ -213,23 +220,24 @@ module.exports = [
         citizen: {
             is_citizen: false,
             asset: null,
-            location: null
+            location: null,
+            player: null
         },
         assets: {
-            north: {},
-            east: {
+            0: {},
+            1: {
                 asset: 'city',
                 connects: []
             },
-            south: {},
-            west: {
+            2: {},
+            3: {
                 asset: 'city',
                 connects: []
             }
         }
     },
     {
-        grid_id: { x: 0, y: 0, z: 0},
+        grid_id: { row: null, column: null },
         orientation: 0,
         corresponding_tiles: {
             north: null,
@@ -242,23 +250,24 @@ module.exports = [
         citizen: {
             is_citizen: false,
             asset: null,
-            location: null
+            location: null,
+            player: null
         },
         assets: {
-            north: {},
-            east: {
+            0: {},
+            1: {
                 asset: 'city',
                 connects: []
             },
-            south: {
+            2: {
                 asset: 'city',
                 connects: []
             },
-            west: {}
+            3: {}
         }
     },
     {
-        grid_id: { x: 0, y: 0, z: 0},
+        grid_id: { row: null, column: null },
         orientation: 0,
         corresponding_tiles: {
             north: null,
@@ -271,26 +280,27 @@ module.exports = [
         citizen: {
             is_citizen: false,
             asset: null,
-            location: null
+            location: null,
+            player: null
         },
         assets: {
-            north: {
+            0: {
                 asset: 'city',
                 connects: []
             },
-            east: {
+            1: {
                 asset: 'road',
-                connects: ['south']
+                connects: [2]
             },
-            south: {
+            2: {
                 asset: 'road',
-                connects: ['east']
+                connects: [1]
             },
-            west: {}
+            3: {}
         }
     },
     {
-        grid_id: { x: 0, y: 0, z: 0},
+        grid_id: { row: null, column: null },
         orientation: 0,
         corresponding_tiles: {
             north: null,
@@ -303,26 +313,27 @@ module.exports = [
         citizen: {
             is_citizen: false,
             asset: null,
-            location: null
+            location: null,
+            player: null
         },
         assets: {
-            north: {
+            0: {
                 asset: 'road',
-                connects: ['west']
+                connects: [3]
             },
-            east: {
+            1: {
                 asset: 'city',
                 connects: []
             },
-            south: {},
-            west: {
+            2: {},
+            3: {
                 asset: 'road',
-                connects: ['north']
+                connects: [0]
             }
         }
     },
     {
-        grid_id: { x: 0, y: 0, z: 0},
+        grid_id: { row: null, column: null },
         orientation: 0,
         corresponding_tiles: {
             north: null,
@@ -335,29 +346,30 @@ module.exports = [
         citizen: {
             is_citizen: false,
             asset: null,
-            location: null
+            location: null,
+            player: null
         },
         assets: {
-            north: {
+            0: {
                 asset: 'road',
-                connects: ['south', 'west']
+                connects: [2, 3]
             },
-            east: {
+            1: {
                 asset: 'city',
                 connects: []
             },
-            south: {
+            2: {
                 asset: 'road',
-                connects: ['north', 'west']
+                connects: [0, 3]
             },
-            west: {
+            3: {
                 asset: 'road',
-                connects: ['north', 'south']
+                connects: [0, 2]
             }
         }
     },
     {
-        grid_id: { x: 0, y: 0, z: 0},
+        grid_id: { row: null, column: null },
         orientation: 0,
         corresponding_tiles: {
             north: null,
@@ -370,23 +382,24 @@ module.exports = [
         citizen: {
             is_citizen: false,
             asset: null,
-            location: null
+            location: null,
+            player: null
         },
         assets: {
-            north: {
+            0: {
                 asset: 'city',
-                connects: ['west']
+                connects: [3]
             },
-            east: {},
-            south: {},
-            west: {
+            1: {},
+            2: {},
+            3: {
                 asset: 'city',
-                connects: ['north']
+                connects: [0]
             }
         }
     },
     {
-        grid_id: { x: 0, y: 0, z: 0},
+        grid_id: { row: null, column: null },
         orientation: 0,
         corresponding_tiles: {
             north: null,
@@ -399,23 +412,24 @@ module.exports = [
         citizen: {
             is_citizen: false,
             asset: null,
-            location: null
+            location: null,
+            player: null
         },
         assets: {
-            north: {
+            0: {
                 asset: 'city',
-                connects: ['west']
+                connects: [3]
             },
-            east: {},
-            south: {},
-            west: {
+            1: {},
+            2: {},
+            3: {
                 asset: 'city',
-                connects: ['north']
+                connects: [0]
             }
         }
     },
     {
-        grid_id: { x: 0, y: 0, z: 0},
+        grid_id: { row: null, column: null },
         orientation: 0,
         corresponding_tiles: {
             north: null,
@@ -428,29 +442,30 @@ module.exports = [
         citizen: {
             is_citizen: false,
             asset: null,
-            location: null
+            location: null,
+            player: null
         },
         assets: {
-            north: {
+            0: {
                 asset: 'city',
-                connects: ['west']
+                connects: [3]
             },
-            east: {
+            1: {
                 asset: 'road',
-                connects: ['south']
+                connects: [2]
             },
-            south: {
+            2: {
                 asset: 'road',
-                connects: ['east']
+                connects: [1]
             },
-            west: {
+            3: {
                 asset: 'city',
-                connects: ['north']
+                connects: [0]
             }
         }
     },
     {
-        grid_id: { x: 0, y: 0, z: 0},
+        grid_id: { row: null, column: null },
         orientation: 0,
         corresponding_tiles: {
             north: null,
@@ -463,29 +478,30 @@ module.exports = [
         citizen: {
             is_citizen: false,
             asset: null,
-            location: null
+            location: null,
+            player: null
         },
         assets: {
-            north: {
+            0: {
                 asset: 'city',
-                connects: ['west']
+                connects: [3]
             },
-            east: {
+            1: {
                 asset: 'road',
-                connects: ['south']
+                connects: [2]
             },
-            south: {
+            2: {
                 asset: 'road',
-                connects: ['east']
+                connects: [1]
             },
-            west: {
+            3: {
                 asset: 'city',
-                connects: ['north']
+                connects: [0]
             }
         }
     },
     {
-        grid_id: { x: 0, y: 0, z: 0},
+        grid_id: { row: null, column: null },
         orientation: 0,
         corresponding_tiles: {
             north: null,
@@ -498,26 +514,27 @@ module.exports = [
         citizen: {
             is_citizen: false,
             asset: null,
-            location: null
+            location: null,
+            player: null
         },
         assets: {
-            north: {
+            0: {
                 asset: 'city',
-                connects: ['east', 'west']
+                connects: [1, 3]
             },
-            east: {
+            1: {
                 asset: 'city',
-                connects: ['north', 'west']
+                connects: [0, 3]
             },
-            south: {},
-            west: {
+            2: {},
+            3: {
                 asset: 'city',
-                connects: ['north', 'east']
+                connects: [0, 1]
             }
         }
     },
     {
-        grid_id: { x: 0, y: 0, z: 0},
+        grid_id: { row: null, column: null },
         orientation: 0,
         corresponding_tiles: {
             north: null,
@@ -530,26 +547,27 @@ module.exports = [
         citizen: {
             is_citizen: false,
             asset: null,
-            location: null
+            location: null,
+            player: null
         },
         assets: {
-            north: {
+            0: {
                 asset: 'city',
-                connects: ['east', 'west']
+                connects: [1, 3]
             },
-            east: {
+            1: {
                 asset: 'city',
-                connects: ['north', 'west']
+                connects: [0, 3]
             },
-            south: {},
-            west: {
+            2: {},
+            3: {
                 asset: 'city',
-                connects: ['north', 'east']
+                connects: [0, 1]
             }
         }
     },
     {
-        grid_id: { x: 0, y: 0, z: 0},
+        grid_id: { row: null, column: null },
         orientation: 0,
         corresponding_tiles: {
             north: null,
@@ -562,30 +580,31 @@ module.exports = [
         citizen: {
             is_citizen: false,
             asset: null,
-            location: null
+            location: null,
+            player: null
         },
         assets: {
-            north: {
+            0: {
                 asset: 'city',
-                connects: ['east', 'west']
+                connects: [1, 3]
                 
             },
-            east: {
+            1: {
                 asset: 'city',
-                connects: ['north', 'west']
+                connects: [0, 3]
             },
-            south: {
+            2: {
                 asset: "road",
                 connects: []
             },
-            west: {
+            3: {
                 asset: "city",
-                connects: ['north', 'east']
+                connects: [0, 1]
             }
         }
     },
     {
-        grid_id: { x: 0, y: 0, z: 0},
+        grid_id: { row: null, column: null },
         orientation: 0,
         corresponding_tiles: {
             north: null,
@@ -598,30 +617,31 @@ module.exports = [
         citizen: {
             is_citizen: false,
             asset: null,
-            location: null
+            location: null,
+            player: null
         },
         assets: {
-            north: {
+            0: {
                 asset: 'city',
-                connects: ['east', 'west']
+                connects: [1, 3]
                 
             },
-            east: {
+            1: {
                 asset: 'city',
-                connects: ['north', 'west']
+                connects: [0, 3]
             },
-            south: {
+            2: {
                 asset: "road",
                 connects: []
             },
-            west: {
+            3: {
                 asset: "city",
-                connects: ['north', 'east']
+                connects: [0, 1]
             }
         }
     },
     {
-        grid_id: { x: 0, y: 0, z: 0},
+        grid_id: { row: null, column: null },
         orientation: 0,
         corresponding_tiles: {
             north: null,
@@ -634,24 +654,25 @@ module.exports = [
         citizen: {
             is_citizen: false,
             asset: null,
-            location: null
+            location: null,
+            player: null
         },
         assets: {
-            north: {
+            0: {
                 asset: 'road',
-                connects: ['south']
+                connects: [2]
                 
             },
-            east: {},
-            south: {
+            1: {},
+            2: {
                 asset: "road",
-                connects: ['north']
+                connects: [0]
             },
-            west: {}
+            3: {}
         }
     },
     {
-        grid_id: { x: 0, y: 0, z: 0},
+        grid_id: { row: null, column: null },
         orientation: 0,
         corresponding_tiles: {
             north: null,
@@ -664,23 +685,24 @@ module.exports = [
         citizen: {
             is_citizen: false,
             asset: null,
-            location: null
+            location: null,
+            player: null
         },
         assets: {
-            north: {},
-            east: {},
-            south: {
+            0: {},
+            1: {},
+            2: {
                 asset: "road",
-                connects: ['west']
+                connects: [3]
             },
-            west: {
+            3: {
                 asset: "road",
-                connects: ['south']
+                connects: [2]
             }
         }
     },
     {
-        grid_id: { x: 0, y: 0, z: 0},
+        grid_id: { row: null, column: null },
         orientation: 0,
         corresponding_tiles: {
             north: null,
@@ -693,26 +715,27 @@ module.exports = [
         citizen: {
             is_citizen: false,
             asset: null,
-            location: null
+            location: null,
+            player: null
         },
         assets: {
-            north: {},
-            east: {
+            0: {},
+            1: {
                 asset: "road",
                 connects: []
             },
-            south: {
+            2: {
                 asset: "road",
                 connects: []
             },
-            west: {
+            3: {
                 asset: "road",
                 connects: []
             }
         }
     },
     {
-        grid_id: { x: 0, y: 0, z: 0},
+        grid_id: { row: null, column: null },
         orientation: 0,
         corresponding_tiles: {
             north: null,
@@ -725,22 +748,23 @@ module.exports = [
         citizen: {
             is_citizen: false,
             asset: null,
-            location: null
+            location: null,
+            player: null
         },
         assets: {
-            north: {
+            0: {
                 asset: "road",
                 connects: []
             },
-            east: {
+            1: {
                 asset: "road",
                 connects: []
             },
-            south: {
+            2: {
                 asset: "road",
                 connects: []
             },
-            west: {
+            3: {
                 asset: "road",
                 connects: []
             }
