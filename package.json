@@ -11,7 +11,8 @@
   },
   "scripts": {
     "start": "nodemon listen.js",
-    "seed": "node db/seed.js"
+    "seed-tiles": "node db/seed-tiles.js",
+    "seed-users": "node db/seed-users.js"
   },
   "repository": {
     "type": "git",
