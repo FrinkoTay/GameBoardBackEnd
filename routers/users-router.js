@@ -1,7 +1,9 @@
 const usersRouter = require('express').Router()
-const { getUserByUsername, getAllUsers } = require('../controllers/users-controller')
+const { getUserByUsername, getAllUsers, postNewUser } = require('../controllers/users-controller')
 
 usersRouter.route('/').get(getAllUsers)
+
+usersRouter.route('/').post(postNewUser)
 
 usersRouter.route('/:username').get(getUserByUsername)
 

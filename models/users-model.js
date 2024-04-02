@@ -14,4 +14,11 @@ exports.readAllUsers = () => {
     return results
 }
 
+exports.addNewUser = (newUser) => {
+    const database = client.db('gameboard')
+    const users = database.collection('users')
+    const result = users.insertOne(newUser)
+    return result
+}
+
 
